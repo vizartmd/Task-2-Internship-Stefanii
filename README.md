@@ -1,4 +1,4 @@
-# Task-2-Internship-Stefanii
+# Task-2 internship-Stefanii
 
 # command model for testing the program from the command line
 
