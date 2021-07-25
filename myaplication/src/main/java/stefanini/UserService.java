@@ -7,11 +7,11 @@ import java.util.List;
 public class UserService {
 
     public void addUser(User user) throws IOException, ClassNotFoundException {
-        File file = new File("/Users/user/Desktop/users.txt");
+        File file = new File("users.txt");
         if (file.length() == 0) {
             List<User> users = new ArrayList<>();
             try{
-                FileOutputStream fout=new FileOutputStream("/Users/user/Desktop/users.txt");
+                FileOutputStream fout=new FileOutputStream("users.txt");
                 ObjectOutputStream out=new ObjectOutputStream(fout);
                 users.add(user);
                 System.out.println("a user was added to empty list");
@@ -31,7 +31,7 @@ public class UserService {
             }
             if (!userExists) {
                 try{
-                    FileOutputStream fout=new FileOutputStream("/Users/user/Desktop/users.txt");
+                    FileOutputStream fout=new FileOutputStream("users.txt");
                     ObjectOutputStream out=new ObjectOutputStream(fout);
                     users.add(user);
                     System.out.println("a user was added to not empty list");
@@ -48,7 +48,7 @@ public class UserService {
     }
 
     public List<User> showAllUsers() throws IOException, ClassNotFoundException {
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("/Users/user/Desktop/users.txt"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("users.txt"));
         List<User> list = (ArrayList<User>) ois.readObject();
         return list;
     }

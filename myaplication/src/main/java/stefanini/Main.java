@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         UserService userService = new UserService();
         TaskService taskService = new TaskService();
-        File newFile = new File("/Users/user/Desktop/users.txt");
+        File newFile = new File("users.txt");
         switch (args[0]) {
             case "createUser":
                 userService.addUser(new User(args[1], args[2], args[3]));

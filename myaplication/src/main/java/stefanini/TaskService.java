@@ -26,7 +26,7 @@ public class TaskService {
                 }
             }
             try{
-                FileOutputStream fout=new FileOutputStream("/Users/user/Desktop/users.txt");
+                FileOutputStream fout=new FileOutputStream("users.txt");
                 ObjectOutputStream out=new ObjectOutputStream(fout);
                 System.out.println("a task was added to user " + userName);
                 out.writeObject(users);
